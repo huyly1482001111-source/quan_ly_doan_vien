@@ -1,0 +1,7 @@
+{
+  "name": "Hệ thống Quản lý Đảng viên Chi bộ - Chuyển đổi số CTĐ, CTCT",
+  "description": "Ứng dụng chuyên biệt dành cho Chi bộ cơ sở trong Quân đội nhân dân Việt Nam, số hóa hồ sơ, quy trình sinh hoạt và quản lý đảng phí theo Điều lệ Đảng.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
