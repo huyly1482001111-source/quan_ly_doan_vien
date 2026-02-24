@@ -76,7 +76,7 @@ const Dashboard: React.FC<DashboardProps> = ({ members, partyFees, meetings }) =
         {/* Quality Chart */}
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-lg font-bold text-slate-800 uppercase tracking-tight">Cơ cấu Đảng viên hiện tại</h3>
+            <h3 className="text-lg font-bold text-slate-800 uppercase tracking-tight">Cơ cấu Đoàn viên hiện tại</h3>
             <span className="text-[10px] font-bold text-slate-400 uppercase">Cập nhật: {new Date().toLocaleDateString('vi-VN')}</span>
           </div>
           <div className="h-64 w-full">
