@@ -68,9 +68,9 @@ const PartyFees: React.FC<PartyFeesProps> = ({
           </td>
         </tr>
       </table>
-      <div style="text-align: center; font-size: 16pt; font-weight: bold; margin-top: 20px;">BÁO CÁO QUYẾT TOÁN THU - NỘP ĐẢNG PHÍ</div>
+      <div style="text-align: center; font-size: 16pt; font-weight: bold; margin-top: 20px;">BÁO CÁO QUYẾT TOÁN THU - NỘP Đoàn PHÍ</div>
       <div style="text-align: center; font-weight: bold; font-style: italic; margin-bottom: 30px;">(Tháng 1 năm 2026)</div>
-      <p style="text-indent: 30px;">Căn cứ Điều lệ Đảng và hướng dẫn nộp đảng phí. Chi bộ Đại đội 10 báo cáo kết quả như sau:</p>
+      <p style="text-indent: 30px;">Căn cứ Điều lệ Đảng và hướng dẫn nộp đoàn phí. Chi bộ Đại đội 10 báo cáo kết quả như sau:</p>
       <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
         <thead>
           <tr style="background-color: #f2f2f2;">
@@ -266,7 +266,7 @@ const handleAddFee = () => {
 
       <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-slate-300">
         <div className="flex items-center mb-4"><AcademicCapIconOutline className="w-5 h-5 text-yellow-500 mr-2" /><h4 className="text-xs font-bold uppercase text-white tracking-widest">Quy định thu nộp</h4></div>
-        <p className="text-[11px] leading-relaxed opacity-80">Đoàn viên trong Quân đội thực hiện nộp đảng phí hàng tháng mức 1% lương/phụ cấp. Chi đoàn tổng hợp và nộp lên Đảng ủy cấp trên đúng thời hạn.</p>
+        <p className="text-[11px] leading-relaxed opacity-80">Đoàn viên trong Quân đội thực hiện nộp đoàn phí hàng tháng mức 1% lương/phụ cấp. Chi đoàn tổng hợp và nộp lên Đảng ủy cấp trên đúng thời hạn.</p>
       </div>
     </div>
   );

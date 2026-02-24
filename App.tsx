@@ -209,9 +209,9 @@
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto mt-6">
         <SidebarItem to="/" icon={HomeIcon} label="Bảng điều khiển" active={currentPath === '/'} />
         <SidebarItem to="/profile" icon={UserCircleIcon} label="Hồ sơ cá nhân" active={currentPath === '/profile'} />
-        <SidebarItem to="/members" icon={UsersIcon} label="Quản lý Đảng viên" active={currentPath === '/members'} />
-        <SidebarItem to="/meetings" icon={ChatBubbleLeftEllipsisIcon} label="Sinh hoạt Chi bộ" active={currentPath === '/meetings'} />
-        <SidebarItem to="/fees" icon={CurrencyDollarIcon} label="Quản lý Đảng phí" active={currentPath === '/fees'} />
+        <SidebarItem to="/members" icon={UsersIcon} label="Quản lý Đoàn viên" active={currentPath === '/members'} />
+        <SidebarItem to="/meetings" icon={ChatBubbleLeftEllipsisIcon} label="Sinh hoạt Chi đoàn" active={currentPath === '/meetings'} />
+        <SidebarItem to="/fees" icon={CurrencyDollarIcon} label="Quản lý Đoàn phí" active={currentPath === '/fees'} />
         <SidebarItem to="/ai-assistant" icon={AcademicCapIcon} label="Trợ lý Nghiệp vụ AI" active={currentPath === '/ai-assistant'} />
       </nav>
     </div>
