@@ -34,7 +34,7 @@ export const MOCK_MEMBERS: Member[] = [
 export const MOCK_MEETINGS: Meeting[] = [
   {
     id: 'm1',
-    title: 'Sinh hoạt Chi bộ định kỳ tháng 01/2026',
+    title: 'Sinh hoạt Chi đoàn định kỳ tháng 01/2026',
     date: '2026-01-01',
     type: 'Định kỳ',
     content: 'Đánh giá kết quả lãnh đạo nhiệm vụ tháng 12-2025, triển khai phương hướng tháng 1-2026.',

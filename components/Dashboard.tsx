@@ -67,10 +67,9 @@ const Dashboard: React.FC<DashboardProps> = ({ members, partyFees, meetings }) =
     <div className="space-y-8 animate-in fade-in duration-500">
       {/* Quick Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard label="Tổng Đảng viên" value={totalCount} icon={UsersIcon} color="bg-red-600" />
-        <StatCard label="Đảng viên Chính thức" value={officialCount} icon={BriefcaseIcon} color="bg-blue-600" />
-        <StatCard label="Đảng viên Dự bị" value={probationaryCount} icon={UserPlusIcon} color="bg-orange-500" />
-        <StatCard label="Hoàn thành Đảng phí" value={`${feeCompletionRate}%`} icon={PresentationChartLineIcon} color="bg-green-600" />
+        <StatCard label="Tổng Đoàn viên" value={totalCount} icon={UsersIcon} color="bg-red-600" />
+       
+        <StatCard label="Hoàn thành Đoàn phí" value={`${feeCompletionRate}%`} icon={PresentationChartLineIcon} color="bg-green-600" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -122,9 +121,9 @@ const Dashboard: React.FC<DashboardProps> = ({ members, partyFees, meetings }) =
             
             <div className="flex items-start space-x-3 p-4 bg-green-50/50 rounded-xl border border-green-100 transition-all hover:shadow-md">
               <div className="flex-1">
-                <p className="text-xs font-bold text-green-800 uppercase mb-1">Tiến độ thu Đảng phí</p>
+                <p className="text-xs font-bold text-green-800 uppercase mb-1">Tiến độ thu Đoàn phí</p>
                 <p className="text-xs text-green-600 font-medium leading-relaxed">
-                  Đã hoàn thành {paidFeesCount}/{totalFeesCount} đảng viên. 
+                  Đã hoàn thành {paidFeesCount}/{totalFeesCount} đoàn viên. 
                   {paidFeesCount < totalFeesCount ? ` Cần đôn đốc ${totalFeesCount - paidFeesCount} đồng chí còn lại.` : ' Tuyệt vời! Chi bộ đã hoàn thành 100% kế hoạch.'}
                 </p>
               </div>
@@ -132,7 +131,7 @@ const Dashboard: React.FC<DashboardProps> = ({ members, partyFees, meetings }) =
 
             <div className="flex items-start space-x-3 p-4 bg-red-50/50 rounded-xl border border-red-100 transition-all hover:shadow-md">
               <div className="flex-1">
-                <p className="text-xs font-bold text-red-800 uppercase mb-1">Sinh hoạt Chi bộ</p>
+                <p className="text-xs font-bold text-red-800 uppercase mb-1">Sinh hoạt Chi đoàn</p>
                 <p className="text-xs text-red-600 font-medium leading-relaxed">
                   Hệ thống ghi nhận {meetings.length} biên bản sinh hoạt. Nhắc nhở: Cần tổ chức sinh hoạt định kỳ tháng tới đúng quy định.
                 </p>

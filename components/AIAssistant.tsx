@@ -32,8 +32,8 @@ const AIAssistant: React.FC = () => {
         <div className="inline-block p-3 bg-red-100 rounded-2xl mb-4">
           <AcademicCapIcon className="w-12 h-12 text-red-600" />
         </div>
-        <h2 className="text-2xl font-bold text-slate-800 uppercase tracking-tight">Trợ lý Nghiệp vụ Đảng thông minh</h2>
-        <p className="text-slate-500 mt-2">Sử dụng trí tuệ nhân tạo (Gemini AI) để tư vấn nghiệp vụ CTĐ, CTCT bám sát thực tiễn Chi bộ.</p>
+        <h2 className="text-2xl font-bold text-slate-800 uppercase tracking-tight">Trợ lý Nghiệp vụ Đoàn thông minh</h2>
+        <p className="text-slate-500 mt-2">Sử dụng trí tuệ nhân tạo (Gemini AI) để tư vấn nghiệp vụ CTĐ bám sát thực tiễn Chi đoàn.</p>
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden">
@@ -49,7 +49,7 @@ const AIAssistant: React.FC = () => {
             <div className="relative">
               <textarea 
                 className="w-full min-h-[120px] p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 outline-none resize-none transition-all text-sm"
-                placeholder="Nhập nội dung cần tư vấn (ví dụ: Quy trình kết nạp Đảng cho chiến sĩ mới...)"
+                placeholder="Nhập nội dung cần tư vấn (ví dụ: Quy trình kết nạp Đoàn cho chiến sĩ mới...)"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />

@@ -109,7 +109,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({ currentUser, members, edi
           <section className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
             <h4 className="text-xs font-black text-red-600 uppercase mb-4 flex items-center">
               <ShieldCheckIcon className="w-4 h-4 mr-2" />
-              Thông tin Đảng tịch
+              Thông tin Đoàn tịch
             </h4>
             <div className="space-y-4">
               <ProfileField label="Trạng thái" value={getVal('status')} isPending={isChanged('status')} />

@@ -1,6 +1,7 @@
 
   import React, { useState, useEffect, useMemo, useCallback } from 'react';
-  import { HashRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+  import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+
   import { 
     HomeIcon, 
     UsersIcon, 
@@ -36,6 +37,8 @@
   const AppContent = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+
     const currentPath = location.pathname;
     
     const [currentUser, setCurrentUser] = useState<User | null>(() => {
@@ -161,26 +164,27 @@
     }
 
     return (
-      <div className="flex min-h-screen bg-slate-50">
-        <aside className="w-72 bg-slate-900 text-white flex flex-col fixed h-full shadow-2xl z-20">
+<div className="flex min-h-screen bg-slate-50">
+<aside className="hidden md:flex w-72 bg-slate-900 text-white flex-col fixed h-full shadow-2xl z-20">
           <div className="p-6 border-b border-slate-800 flex items-center space-x-3">
             <div className="bg-red-600 p-2 rounded-lg shadow-inner">
               <ShieldCheckIcon className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold tracking-tight uppercase leading-none">Chi bộ</h1>
+              <h1 className="text-xl font-bold tracking-tight uppercase leading-none">Chi đoàn</h1>
               <p className="text-[9px] text-slate-400 uppercase tracking-widest mt-1">Nền tảng quản lý CTĐ</p>
             </div>
           </div>
 
-          <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-            <SidebarItem to="/" icon={HomeIcon} label="Bảng điều khiển" active={currentPath === '/'} />
-            <SidebarItem to="/profile" icon={UserCircleIcon} label="Hồ sơ cá nhân" active={currentPath === '/profile'} />
-            <SidebarItem to="/members" icon={UsersIcon} label="Quản lý Đảng viên" active={currentPath === '/members'} />
-            <SidebarItem to="/meetings" icon={ChatBubbleLeftEllipsisIcon} label="Sinh hoạt Chi bộ" active={currentPath === '/meetings'} />
-            <SidebarItem to="/fees" icon={CurrencyDollarIcon} label="Quản lý Đảng phí" active={currentPath === '/fees'} />
-            <SidebarItem to="/ai-assistant" icon={AcademicCapIcon} label="Trợ lý Nghiệp vụ AI" active={currentPath === '/ai-assistant'} />
-          </nav>
+          <nav className="flex-1 p-4 space-y-2 overflow-y-auto mt-6">
+  <SidebarItem to="/" icon={HomeIcon} label="Bảng điều khiển" active={currentPath === '/'} />
+  <SidebarItem to="/profile" icon={UserCircleIcon} label="Hồ sơ cá nhân" active={currentPath === '/profile'} />
+  <SidebarItem to="/members" icon={UsersIcon} label="Quản lý Đoàn viên" active={currentPath === '/members'} />
+  <SidebarItem to="/meetings" icon={ChatBubbleLeftEllipsisIcon} label="Sinh hoạt Chi đoàn" active={currentPath === '/meetings'} />
+  <SidebarItem to="/fees" icon={CurrencyDollarIcon} label="Quản lý Đoàn phí" active={currentPath === '/fees'} />
+  <SidebarItem to="/ai-assistant" icon={AcademicCapIcon} label="Trợ lý Nghiệp vụ AI" active={currentPath === '/ai-assistant'} />
+</nav>
+
 
           <div className="p-6 border-t border-slate-800">
             <div className="bg-slate-800/50 p-3 rounded-xl border border-slate-700/50 flex items-center space-x-3">
@@ -194,12 +198,44 @@
             </div>
           </div>
         </aside>
+{/* Mobile Sidebar */}
+{sidebarOpen && (
+  <div className="fixed inset-0 z-40 flex md:hidden">
+    <div
+      className="fixed inset-0 bg-black/50"
+      onClick={() => setSidebarOpen(false)}
+    />
+    <div className="relative w-64 bg-slate-900 text-white flex flex-col shadow-2xl">
+      <nav className="flex-1 p-4 space-y-2 overflow-y-auto mt-6">
+        <SidebarItem to="/" icon={HomeIcon} label="Bảng điều khiển" active={currentPath === '/'} />
+        <SidebarItem to="/profile" icon={UserCircleIcon} label="Hồ sơ cá nhân" active={currentPath === '/profile'} />
+        <SidebarItem to="/members" icon={UsersIcon} label="Quản lý Đảng viên" active={currentPath === '/members'} />
+        <SidebarItem to="/meetings" icon={ChatBubbleLeftEllipsisIcon} label="Sinh hoạt Chi bộ" active={currentPath === '/meetings'} />
+        <SidebarItem to="/fees" icon={CurrencyDollarIcon} label="Quản lý Đảng phí" active={currentPath === '/fees'} />
+        <SidebarItem to="/ai-assistant" icon={AcademicCapIcon} label="Trợ lý Nghiệp vụ AI" active={currentPath === '/ai-assistant'} />
+      </nav>
+    </div>
+  </div>
+)}
 
-        <main className="ml-72 flex-1 p-8">
-          <header className="mb-8 flex justify-between items-center">
+<main className="flex-1 md:ml-72 p-4 md:p-8 overflow-x-hidden">
+  {/* Mobile Header */}
+<div className="md:hidden flex items-center justify-between mb-4">
+  <button
+    onClick={() => setSidebarOpen(true)}
+    className="p-2 rounded-lg bg-slate-900 text-white"
+  >
+    ☰
+  </button>
+  <h2 className="text-sm font-bold text-slate-800">
+    Chi bộ Đại đội 10
+  </h2>
+</div>
+
+<header className="hidden md:flex mb-8 justify-between items-center">
             <div>
-              <h2 className="text-2xl font-bold text-slate-800">Chi bộ Đại đội 10 - Đảng bộ Tiểu đoàn 3</h2>
-              <p className="text-slate-500 text-sm">Chuyển đổi số công tác Đảng trong Quân đội</p>
+              <h2 className="text-2xl font-bold text-slate-800">Chi đoàn Đại đội 10 - Liên chi đoàn Tiểu đoàn 3</h2>
+              <p className="text-slate-500 text-sm">Chuyển đổi số công tác Đoàn trong Quân đội</p>
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-3 pr-6 border-r border-slate-200 text-right">
@@ -221,7 +257,7 @@
             </div>
           </header>
 
-          <div className="bg-white rounded-3xl shadow-sm border border-slate-200 min-h-[calc(100vh-210px)] overflow-hidden p-8">
+<div className="bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 min-h-[calc(100vh-150px)] md:min-h-[calc(100vh-210px)] p-4 md:p-8">
             <Routes>
               <Route path="/" element={<Dashboard members={members} partyFees={partyFees} meetings={meetings} />} />
               <Route path="/profile" element={<MemberProfile currentUser={currentUser} members={members} editRequests={editRequests} onAddRequest={(req) => setEditRequests(prev => [...prev, req])} />} />
@@ -272,10 +308,11 @@
     );
   };
 
-  const App = () => (
-    <Router>
-      <AppContent />
-    </Router>
-  );
+  const App = () => {
+  return <AppContent />;
+};
 
-  export default App;
+export default App;
+
+
+

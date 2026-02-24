@@ -207,7 +207,7 @@ const MemberList: React.FC<MemberListProps> = ({
         <div>
           <h3 className="text-xl font-bold text-slate-800 uppercase">Quản lý Hồ sơ & Tài khoản</h3>
           <div className="flex mt-4 space-x-1 bg-slate-100 p-1 rounded-lg w-fit">
-            <button onClick={() => setActiveTab('all')} className={`px-4 py-1.5 text-[10px] font-bold uppercase rounded-md transition-all ${activeTab === 'all' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}>Danh sách Chi bộ</button>
+            <button onClick={() => setActiveTab('all')} className={`px-4 py-1.5 text-[10px] font-bold uppercase rounded-md transition-all ${activeTab === 'all' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}>Danh sách Chi đoàn</button>
             {isSecretary && (
               <button onClick={() => setActiveTab('pending')} className={`px-4 py-1.5 text-[10px] font-bold uppercase rounded-md transition-all flex items-center ${activeTab === 'pending' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}>
                 Chờ duyệt {editRequests.length > 0 && <span className="ml-2 bg-red-600 text-white text-[9px] px-1.5 py-0.5 rounded-full">{editRequests.length}</span>}
@@ -265,8 +265,8 @@ const MemberList: React.FC<MemberListProps> = ({
           <table className="min-w-full divide-y divide-slate-200">
             <thead className="bg-slate-50">
               <tr>
-                <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Đảng viên / Cấp bậc</th>
-                <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Số thẻ Đảng</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Đoàn viên / Cấp bậc</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Số thẻ Đoàn</th>
                 <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Tài khoản</th>
                 <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Trạng thái</th>
                 <th className="px-6 py-4 text-right text-xs font-bold text-slate-500 uppercase">Thao tác</th>

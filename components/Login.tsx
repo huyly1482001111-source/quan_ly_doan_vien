@@ -38,8 +38,8 @@ const Login: React.FC<LoginProps> = ({ onLoginAttempt }) => {
             <div className="inline-flex items-center justify-center p-4 bg-red-600 rounded-2xl shadow-lg mb-6 transform hover:scale-110 transition-transform">
               <ShieldCheckIcon className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-white uppercase tracking-wider">Hệ thống Chi bộ</h1>
-            <p className="text-slate-400 text-sm mt-2 font-medium uppercase">Công tác Đảng - QĐND Việt Nam</p>
+            <h1 className="text-2xl font-bold text-white uppercase tracking-wider">Hệ thống Chi đoàn</h1>
+            <p className="text-slate-400 text-sm mt-2 font-medium uppercase">Công tác Đoàn - QĐND Việt Nam</p>
           </div>
 
           <form onSubmit={handleLogin} className="p-8 pt-0 space-y-5">

@@ -156,7 +156,7 @@ const handleAddFee = () => {
     <div className="space-y-6 animate-in fade-in duration-500">
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
         <div>
-          <h3 className="text-xl font-bold text-slate-800 uppercase flex items-center"><BanknotesIcon className="w-6 h-6 mr-2 text-red-600" />Quản lý Đảng phí</h3>
+          <h3 className="text-xl font-bold text-slate-800 uppercase flex items-center"><BanknotesIcon className="w-6 h-6 mr-2 text-red-600" />Quản lý Đoàn phí</h3>
           <p className="text-sm text-slate-500 mt-1 italic flex items-center"><ArrowPathIcon className="w-4 h-4 mr-1 text-slate-400" />Dữ liệu thu nộp tháng 01 năm 2026</p>
         </div>
        <div className="flex items-center space-x-2">
@@ -166,7 +166,7 @@ const handleAddFee = () => {
       className="bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase shadow-lg flex items-center space-x-2"
     >
       <AcademicCapIconOutline className="w-4 h-4" />
-      <span>Thêm đảng viên</span>
+      <span>Thêm đoàn viên</span>
     </button>
   )}
 
@@ -266,7 +266,7 @@ const handleAddFee = () => {
 
       <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-slate-300">
         <div className="flex items-center mb-4"><AcademicCapIconOutline className="w-5 h-5 text-yellow-500 mr-2" /><h4 className="text-xs font-bold uppercase text-white tracking-widest">Quy định thu nộp</h4></div>
-        <p className="text-[11px] leading-relaxed opacity-80">Đảng viên trong Quân đội thực hiện nộp đảng phí hàng tháng mức 1% lương/phụ cấp. Chi bộ tổng hợp và nộp lên Đảng ủy cấp trên đúng thời hạn.</p>
+        <p className="text-[11px] leading-relaxed opacity-80">Đoàn viên trong Quân đội thực hiện nộp đảng phí hàng tháng mức 1% lương/phụ cấp. Chi đoàn tổng hợp và nộp lên Đảng ủy cấp trên đúng thời hạn.</p>
       </div>
     </div>
   );
