@@ -21,7 +21,7 @@ const AIAssistant: React.FC = () => {
 
   const suggestions = [
     "Quy trình xét chuyển đảng viên dự bị thành chính thức?",
-    "Nội dung trọng tâm sinh hoạt chi bộ tháng 1/2026?",
+    "Nội dung trọng tâm sinh hoạt chi đoàn tháng 1/2026?",
     "Cách viết bản kiểm điểm đảng viên cuối năm?",
     "Quy định về sinh hoạt chuyên đề quân sự?"
   ];

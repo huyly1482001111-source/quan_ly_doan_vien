@@ -103,7 +103,7 @@ const MemberList: React.FC<MemberListProps> = ({
     const id = Math.random().toString(36).substr(2, 9);
     onAddMember({ ...memberFormData, id } as Member);
     setIsAddingMember(false);
-    alert('Đã thêm Đảng viên mới thành công!');
+    alert('Đã thêm Đoàn viên mới thành công!');
   };
 
   const handleEditSubmit = (e: React.FormEvent) => {
@@ -226,7 +226,7 @@ const MemberList: React.FC<MemberListProps> = ({
           {isSecretary && activeTab === 'all' && (
             <button onClick={handleOpenAdd} className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 shadow-lg shadow-red-100 text-sm font-bold uppercase">
               <PlusIcon className="w-4 h-4" />
-              <span>Thêm Đảng viên</span>
+              <span>Thêm Đoàn viên</span>
             </button>
           )}
         </div>
@@ -324,7 +324,7 @@ const MemberList: React.FC<MemberListProps> = ({
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[150] flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl shadow-2xl w-full max-w-5xl overflow-hidden flex flex-col max-h-[90vh] animate-in zoom-in-95 duration-200">
             <div className={`${isAddingMember ? 'bg-red-700' : 'bg-blue-900'} p-6 text-white flex justify-between items-center`}>
-              <h4 className="text-lg font-bold uppercase tracking-tight">{isAddingMember ? 'Thêm Đảng viên mới' : 'Cập nhật hồ sơ trực tiếp'}</h4>
+              <h4 className="text-lg font-bold uppercase tracking-tight">{isAddingMember ? 'Thêm Đoàn viên mới' : 'Cập nhật hồ sơ trực tiếp'}</h4>
               <button onClick={() => { setIsAddingMember(false); setEditingMember(null); }} className="p-2 hover:bg-white/10 rounded-full transition-colors"><XMarkIcon className="w-6 h-6" /></button>
             </div>
             <form onSubmit={isAddingMember ? handleAddSubmit : handleEditSubmit} className="flex flex-col flex-1 overflow-hidden">

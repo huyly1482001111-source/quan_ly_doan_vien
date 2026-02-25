@@ -52,7 +52,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({ currentUser, members, edi
     };
     onAddRequest(request);
     setIsEditing(false);
-    alert('Yêu cầu thay đổi hồ sơ đã được gửi tới Bí thư chi bộ phê duyệt.');
+    alert('Yêu cầu thay đổi hồ sơ đã được gửi tới Bí thư chi đoàn phê duyệt.');
   };
 
   const getVal = (field: keyof Member) => {

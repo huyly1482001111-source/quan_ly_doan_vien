@@ -114,9 +114,9 @@ const MeetingLog: React.FC<MeetingLogProps> = ({
   const handleExportWord = (meeting: Meeting) => {
     const htmlContent = `
       <div style="text-align: center; font-weight: bold; font-family: 'Times New Roman';">ĐẢNG CỘNG SẢN VIỆT NAM</div>
-      <div style="text-align: center; font-weight: bold; font-family: 'Times New Roman';">CHI BỘ ĐẠI ĐỘI 10</div>
+      <div style="text-align: center; font-weight: bold; font-family: 'Times New Roman';">CHI ĐOÀN ĐẠI ĐỘI 10</div>
       <br/>
-      <div style="text-align: center; font-size: 14pt; font-weight: bold; font-family: 'Times New Roman';">BIÊN BẢN SINH HOẠT CHI BỘ</div>
+      <div style="text-align: center; font-size: 14pt; font-weight: bold; font-family: 'Times New Roman';">BIÊN BẢN SINH HOẠT CHI ĐOÀN</div>
       <div style="text-align: center; font-weight: bold; font-family: 'Times New Roman';">${meeting.title.toUpperCase()}</div>
       <br/>
       <div style="font-family: 'Times New Roman';">
@@ -130,7 +130,7 @@ const MeetingLog: React.FC<MeetingLogProps> = ({
         <p><b>III. Nội dung sinh hoạt:</b></p>
         <div style="white-space: pre-wrap; margin-top: 10px;">${meeting.content}</div>
         <br/>
-        <p><b>IV. Nghị quyết Chi bộ:</b></p>
+        <p><b>IV. Nghị quyết Chi đoàn:</b></p>
         <div style="font-style: italic; border-left: 4px solid #cc0000; padding-left: 15px; margin: 10px 0;">"${meeting.resolution}"</div>
         <br/><br/>
         <table style="width: 100%; border: none;">
@@ -261,7 +261,7 @@ const MeetingLog: React.FC<MeetingLogProps> = ({
                   <textarea className={`w-full h-40 p-4 bg-slate-50 border rounded-xl text-sm outline-none resize-none focus:ring-2 focus:ring-red-500 ${formErrors.content ? 'border-red-500' : 'border-slate-200'}`} value={formData.content} onChange={(e) => setFormData({...formData, content: e.target.value})} placeholder="Ghi nhận nội dung sinh hoạt..." />
                 </div>
                 <div className="md:col-span-2 space-y-1">
-                  <label className="text-[10px] font-black text-red-700 uppercase flex justify-between">Nghị quyết Chi bộ * {formErrors.resolution && <span className="text-red-500">Bắt buộc</span>}</label>
+                  <label className="text-[10px] font-black text-red-700 uppercase flex justify-between">Chương trình hoạt động CTĐ/PTTN * {formErrors.resolution && <span className="text-red-500">Bắt buộc</span>}</label>
                   <textarea className={`w-full h-24 p-4 bg-red-50/30 border rounded-xl text-sm font-bold italic outline-none resize-none focus:ring-2 focus:ring-red-500 ${formErrors.resolution ? 'border-red-500' : 'border-red-100'}`} value={formData.resolution} onChange={(e) => setFormData({...formData, resolution: e.target.value})} placeholder="Nội dung nghị quyết..." />
                 </div>
               </div>

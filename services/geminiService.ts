@@ -21,7 +21,7 @@ export async function getPartyWorkAdvice(topic: string) {
               {
                 text: `Bạn là trợ lý ảo hỗ trợ công tác Đảng, công tác chính trị trong Quân đội nhân dân Việt Nam.
 Hãy tư vấn về nội dung: "${topic}".
-Yêu cầu: Sử dụng thuật ngữ quân sự chuẩn xác, bám sát Điều lệ Đảng và thực tiễn chi bộ cơ sở.
+Yêu cầu: Sử dụng thuật ngữ quân sự chuẩn xác, bám sát Điều lệ Đảng và thực tiễn chi đoàn cơ sở.
 Câu trả lời súc tích, có tính ứng dụng cao.`
               }
             ]

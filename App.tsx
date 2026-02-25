@@ -228,14 +228,14 @@
     ☰
   </button>
   <h2 className="text-sm font-bold text-slate-800">
-    Chi bộ Đại đội 10
+    Chi đoàn Đại đội 10
   </h2>
 </div>
 
 <header className="hidden md:flex mb-8 justify-between items-center">
             <div>
               <h2 className="text-2xl font-bold text-slate-800">Chi đoàn Đại đội 10 - Liên chi đoàn Tiểu đoàn 3</h2>
-              <p className="text-slate-500 text-sm">Chuyển đổi số công tác Đoàn trong Quân đội</p>
+              <p className="text-slate-500 text-sm">Chuyển đổi số CTĐ/PTTN trong Quân đội</p>
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-3 pr-6 border-r border-slate-200 text-right">

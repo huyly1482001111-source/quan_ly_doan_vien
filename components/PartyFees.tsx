@@ -59,7 +59,7 @@ const PartyFees: React.FC<PartyFeesProps> = ({
         <tr>
           <td style="border: none; text-align: center; width: 40%;">
             ĐẢNG CỘNG SẢN VIỆT NAM<br/>
-            <b>CHI BỘ ĐẠI ĐỘI 10</b><br/>
+            <b>CHI ĐOÀN ĐẠI ĐỘI 10</b><br/>
             *
           </td>
           <td style="border: none; text-align: center; width: 60%;">
@@ -70,7 +70,7 @@ const PartyFees: React.FC<PartyFeesProps> = ({
       </table>
       <div style="text-align: center; font-size: 16pt; font-weight: bold; margin-top: 20px;">BÁO CÁO QUYẾT TOÁN THU - NỘP Đoàn PHÍ</div>
       <div style="text-align: center; font-weight: bold; font-style: italic; margin-bottom: 30px;">(Tháng 1 năm 2026)</div>
-      <p style="text-indent: 30px;">Căn cứ Điều lệ Đảng và hướng dẫn nộp đoàn phí. Chi bộ Đại đội 10 báo cáo kết quả như sau:</p>
+      <p style="text-indent: 30px;">Căn cứ Điều lệ Đảng và hướng dẫn nộp đoàn phí. Chi đoàn Đại đội 10 báo cáo kết quả như sau:</p>
       <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
         <thead>
           <tr style="background-color: #f2f2f2;">
@@ -132,7 +132,7 @@ const handleAddFee = () => {
   const newFee: PartyFee = {
     id: 'fee-' + Date.now(),
     memberId: 'temp',    
-    memberName: 'Đảng viên mới',
+    memberName: 'Đoàn viên mới',
     month: 1,        // 👈 sửa tháng tại đây
     year: 2026,
     amount: 50000,
@@ -148,7 +148,7 @@ const handleAddFee = () => {
     className="bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase shadow-lg flex items-center space-x-2"
   >
     <AcademicCapIconOutline className="w-4 h-4" />
-    <span>Thêm đảng viên</span>
+    <span>Thêm đoàn viên</span>
   </button>
 )}
 
